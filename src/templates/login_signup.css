@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.8px;
+  color: #66fcf1;
+}
+
+body {
+  background-color: #fff;
+}
+.card {
+  background-color: #1f2833;
+  padding: 40px;
+}
+
+.card-body form .form-group input {
+  background-color: #1f2833;
+  outline: none;
+  box-shadow: none;
+  border: transparent;
+  border-bottom: 1px solid #45a29e;
+
+  color: #45a29e;
+  margin-bottom: 40px;
+}
+
+.card-body form button {
+  outline: none;
+  box-shadow: none;
+  border: transparent;
+  background-color: #45a29e;
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+#create-account a {
+  list-style: none;
+  text-decoration: none;
+  color: #45a29e;
+  font-weight: 400;
+}
