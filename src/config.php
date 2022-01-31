@@ -1,9 +1,25 @@
 <?php
 
-$db_user = 'root';
-$db_password = '';
-$db_name = "tnp_manager";
+$username = 'root';
+$password = ''; //push db password
+$db_name = 'tnp_manager';
+$success = 'user saved sucessully!';
+$error=  'error in saving data!';
 
-$db = new PDO('mysql:host=localhost;dbname='.$db_name.';charset=utf8mb4',$db_user,$db_password);
+try {
+    $db = connect ($db_name, $username, $password);
+    // echo 'Connected to database';
 
-$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo $e->getMessage();
+}
+
+
+function connect ($db_name, $username, $password){
+    // $dbh = new PDO("mysql:host=$hostname;dbname=removed", $username, $password);
+    // $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    $db  = new PDO("mysql:host=localhost;port=3308;dbname=$db_name",$username, $password);
+    return $db;
+}
+
+?>
